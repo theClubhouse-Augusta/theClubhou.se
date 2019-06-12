@@ -23,6 +23,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -53,6 +55,30 @@ table {
 *
 */
 
+@-webkit-keyframes vroom {
+  from {: url(images/theclubhouse.png);}
+  to {: url(https://enacademic.com/pictures/enwiki/49/1968ChevroletCamaroZ28.png)}
+    12.5% {left: 30%;}
+    25% {left: 50%;}
+    37.5% {left: -30%;}
+    50% {left: -50%;}
+    62.5% {left: -75%;}
+    75% {left: -90%;}
+}
+
+/* Standard syntax */
+@keyframes vroom {
+  from {background-image: url(images/theclubhouse.png);}
+  to {background-image: url(https://enacademic.com/pictures/enwiki/49/1968ChevroletCamaroZ28.png); }
+    12.5% {left: 30%;}
+    25% {left: 50%;}
+    37.5% {left: -30%;}
+    50% {left: -50%;}
+    62.5% {left: -75%;}
+    75% {left: -90%;}
+}
+
+@-web
 
 @font-face {
     font-family: 'league-gothic';
@@ -61,8 +87,14 @@ table {
 body {
     max-width: 500px;
     margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial Narrow, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    font-variant: small-caps;
     line-height: 1.3;
+    background-image: url(https://image.shutterstock.com/z/stock-vector-colorful-vector-seamless-vintage-wavy-pattern-in-mid-century-style-518081149.jpg);
+    color: #774836;
+
 }
 p {
     text-align: justify;
@@ -75,9 +107,13 @@ a:hover, button:hover {
 }
 main {
     margin-bottom: 30px;
+    padding-bottom: 50px;
     width: 80%;
-    max-width: 390px;
+    height:1500px;
+    max-width: 500px;
     margin: 0 auto;
+    background-color: #F3CDA9;
+    padding:50px;
 }
 section {
     margin-top: 30px;
@@ -87,6 +123,8 @@ footer {
     margin-top: 20px;
     margin-bottom: 30px;
     clear: both;
+    background-color: #537479;
+   
 }
 footer p {
     text-align: center;
@@ -101,16 +139,20 @@ img {
     max-width: 250px;
     display: block;
     margin: 40px auto;
+    
+
 }
 button {
     font-family: 'league-gothic', 'Open Sans';
     font-weight: bold;
     font-size: 40px;
-    background: white;
-    border: none;
+    background-position: center fill;
+    background-size: 100%;
+    /*background-image: url(http://pluspng.com/img-png/black-and-white-flag-png-black-and-white-chequered-flag-500.png);*/
     margin: 0 auto;
     display: block;
     width: 100%;
+    background-color: #537479;
 }
 @media(max-width: 400px) {
     button {
@@ -128,16 +170,29 @@ i {
 .join {
     float: left;
     width: 50%;
+    font-family: marker, fantasy;
+    color:#774836;
+    -webkit-animation-name: vroom;
+    animation-name: vroom;
+    animation-delay: 1.5s;
+    animation-duration: 6s;
 }
 .login {
     float: right;
     width: 50%;
+    font-family: marker, fantasy;
+    color:#774836;
+    -webkit-animation-name: vroom;
+    animation-name: vroom;
+    animation-delay: 1.5s;
+    animation-duration: 6s;
+
 }
 .join > a, .login > a {
     display: block;
     width: 80%;
     margin: 0 auto;
-    border: 4px solid black;
+    border: 1rem solid #EE592E;
     padding: 40px 0;
 }
 
