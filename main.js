@@ -1,5 +1,24 @@
-var loadStudentStyle = function (event) {
+var students = {
+    "names": [
+        'Veronica',
+        'Terry',
+        'Kat',
+        'Melva',
+        'Ameris',
+        'Joel',
+        'Rain',
+        'Lathan',
+        'Wilisa',
+        'Taylor',
+        'Chris'
+    ],
+    "lastClicked": []
+}
 
+/* Build the listener function for the swap */
+function loadStudentStyle (event) {
+
+        // Get all of the Student Names
     var studentName = event.target.classList;
 
     studentName.forEach(function(string) {
@@ -7,6 +26,23 @@ var loadStudentStyle = function (event) {
             studentName = string.split("--")[1];
         }
     });
+
+    // check if we have been here before
+    if(students.lastClicked.length > 0) {
+        
+        // remove from the students.lastClicked list
+        var lastStudent = students.lastClicked.pop().toLowerCase();
+
+        console.log(lastStudent);
+        // get a link with the href of the old style tag    
+        var oldLink = document.querySelector("link[href='" + lastStudent + ".css']");
+        console.log(oldLink, lastStudent);
+
+        // remove an old link from the DOM
+        oldLink.parentNode.removeChild(oldLink);
+    }
+
+    
 
 
     // Create new link Element 
@@ -17,15 +53,21 @@ var loadStudentStyle = function (event) {
     styleLink.type = 'text/css'; 
 
     styleLink.href = studentName.toLowerCase() + '.css';  
-
-
+    
     // Get HTML head element to append  
     // link element to it  
-    console.log(document.getElementsByTagName('HEAD'));
-    // document.getElementsByTagName('HEAD')[0].appendChild(styleLink);
+
+    students.lastClicked.push(studentName);
+
+    document.getElementsByTagName('HEAD')[0].appendChild(styleLink);
 }
 
-var studentSwapList = function () {
+
+
+/* 
+* Build the List of items 
+*/
+function studentSwapList () {
 
     if(document.querySelector(".style-swap")) {
         return;
@@ -43,19 +85,7 @@ var studentSwapList = function () {
         return studentElement;
     }
 
-    var studentNames = [ 
-        'Veronica',
-        'Terry',
-        'Kat',
-        'Melva',
-        'Ameris',
-        'Joel',
-        'Rain',
-        'Lathan',
-        'Wilisa',
-        'Taylor',
-        'Chris'
-    ];
+
 
     var studentList = document.createElement("ul");
     studentList.classList.add("style-swap");
@@ -64,7 +94,7 @@ var studentSwapList = function () {
         loadStudentStyle(event);
     });
 
-    studentNames.forEach(function (studentName) {
+    students.names.forEach(function (studentName) {
         // Create a list item for each student.
         var studentEl = createStudentElement(studentName);
 
