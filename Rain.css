@@ -1,0 +1,92 @@
+body {
+    background: linear-gradient(to bottom, blue, skyblue, lightblue, white);
+    background-image: url(https://media1.giphy.com/media/TxVVB6PfWMjE4/giphy.gif);
+   
+}
+.fa-facebook-f {
+    background-color: darkblue;
+}
+.fa-twitter {
+    background-color: cyan;
+}
+.fa-instagram {
+    background-color: rgb(161, 59, 161);
+}
+.fa-youtube {
+    background-color: red;
+}
+.fa-linkedin-in {
+    background-color: cornflowerblue;
+}
+.fa-meetup {
+    background-color: rgb(252, 78, 58);
+}
+button {
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    background: lightyellow;
+}
+main {
+    perspective: 1000px;
+}
+p {
+    color: yellow;
+    margin-top: 20px;
+}
+.login, .join {
+    margin-top: 50px;
+    height: 20px;
+    border-radius: 50px;
+}
+img {
+    animation-name: spinner;
+}
+footer {
+    margin-top: 50px;
+}
+.join a, .login a {
+    padding: 0px;
+    border: none;
+    border-radius: 10px;
+}
+main p:nth-child(2) {
+    transform: translateZ(-600px);
+    transform: rotatex(50deg);
+    padding-top: 10px;
+    font-size: 20px;
+    
+}
+main p:nth-child(3) {
+    transform: translateZ(-500px);
+    transform: rotatex(50deg);
+    padding-top: 20px;
+    font-size: 25px;
+    
+}
+main p:nth-child(4) {
+    transform: translateZ(-400px);
+    transform: rotatex(50deg);
+    padding-top: 30px;
+    font-size: 30px;
+    
+}
+p a {color: white;}
+@keyframes spinning {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+main img {
+    animation-name: spinning; 
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform: none;
+}
+.dashed {
+    animation: none;
+}
