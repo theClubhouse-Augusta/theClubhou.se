@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'league-gothic';
-    src: 'fonts/League-Gothic/LeagueGothic-CondensedRegular.otf';
+    src: url('fonts/League-Gothic/LeagueGothic-CondensedRegular.otf') format("truetype");
 }
 body {
     max-width: 500px;
