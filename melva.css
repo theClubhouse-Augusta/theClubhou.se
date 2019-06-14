@@ -4,17 +4,13 @@ body {
     margin: 0 auto;
     font-family: 'Abril Fatface', cursive;
     line-height: 1.3;
-    background: linear-gradient(black, gold,fuchsia, white);
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxXhUGle3MRGGtJrwuHIx4UMq12OvAkElisSU8vT9CA6hhz3Q"); */
-    /* background-repeat: no-repeat; */
-    
+    background: linear-gradient(black, gold,fuchsia, white);    
 }   
     
 p {
     text-align: justify;
     font-family: 'Abril Fatface', cursive;
-  
-    
+      
 }
 a {
     text-decoration: none;
@@ -116,32 +112,11 @@ i {
     width: 50%;
 } 
 
-
-/* .login {
-    background: #2db34a;
-    border-radius: 2px;
-    transition-property: background, border-radius;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-  }
-       
-.login:hover {
-    background: #750075;
-    border-radius: 60%;
-  } */
-
 .dashed {
     display: block;
     width: 0%;
     margin-top: 250px;
 } 
-
-/* .login a {
-    margin: 0 auto 30px 0;
-}
-.login a {
-    margin: 0 0 30px auto;
-} */
 
 .soc-media {
     width: 80%;
