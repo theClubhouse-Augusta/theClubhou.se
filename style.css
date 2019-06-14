@@ -1,6 +1,9 @@
 @font-face {
     font-family: 'league-gothic';
     src: url('fonts/League-Gothic/LeagueGothic-CondensedRegular.otf') format("truetype");
+
+    font-family: 'LCD_Solid';
+    src: url('fonts/LCD_Solid.ttf') format("truetype")
 }
 body {
     max-width: 500px;
@@ -107,4 +110,20 @@ i {
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
+}
+
+
+.style-swap__item {
+font-family: "LCD_Solid";
+text-transform: capitalize;
+border: 5px solid black;
+padding: 10px;
+background-color: #8FB0A9;
+width: 150px;
+line-height: 30px;    
+display: block;
+font-size: 60px;
+margin: 10px;
+cursor: pointer;
+font-size: 20px;
 }
