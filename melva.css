@@ -67,7 +67,7 @@ body {
     background: linear-gradient(black, gold,fuchsia, white);
     /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxXhUGle3MRGGtJrwuHIx4UMq12OvAkElisSU8vT9CA6hhz3Q"); */
     /* background-repeat: no-repeat; */
-
+    
 }   
     
 p {
@@ -82,6 +82,8 @@ a {
 a:hover, button:hover {
     cursor: pointer;
 }
+
+
 main {
     margin-bottom: 30px;
     width: 80%;
@@ -89,7 +91,7 @@ main {
     margin: 0 auto;
 }
 section {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 footer {
     width: 100%;
@@ -102,16 +104,18 @@ footer p {
     font-family: 'Abril Fatface', cursive;
 }
 footer a {
-    color: black;
+    color: green;
 }
 p + p {
     margin-top: 30px;
 }
+
 img {
     max-width: 250px;
     display: block;
     margin: 40px auto;
 }
+
 button {
     font-family: 'Abril Fatface', cursive;
     font-weight: bold;
@@ -122,6 +126,7 @@ button {
     display: block;
     width: 80%;
 }
+
 @media(max-width: 400px) {
     button {
         font-size: 24px;
@@ -156,32 +161,31 @@ i {
     border-radius: 60%;
   }
 
-.login {
-    float: right;
-    width: 50%;
-}
-
-
 .join > a, .login > a {
     display: block;
     width: 50%;
     margin: 0 auto;
     border: auto;
-    border: 1px solid, goldenrod;
+    border: 1px solid, #2db34a;
     padding: 30px 0;
 }
 
-/* 
-.join {
+
+.login {
+    float: right;
+    width: 50%;
+} 
+
+
+/* .login {
     background: #2db34a;
-    border-radius: 8px;
+    border-radius: 2px;
     transition-property: background, border-radius;
     transition-duration: 1s;
     transition-timing-function: linear;
   }
-    
-   
-.join:hover {
+       
+.login:hover {
     background: #750075;
     border-radius: 60%;
   } */
@@ -190,18 +194,20 @@ i {
     display: block;
     width: 0%;
     margin-top: 250px;
-}
+} 
 
-.join a {
+/* .login a {
     margin: 0 auto 30px 0;
 }
 .login a {
     margin: 0 0 30px auto;
-}
+} */
 
 .soc-media {
     width: 80%;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    margin: 30px auto;
+    margin: 40px auto;
+
 }
+
