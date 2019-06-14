@@ -1,7 +1,9 @@
 @font-face {
     font-family: 'league-gothic';
     src: url('fonts/League-Gothic/LeagueGothic-CondensedRegular.otf') format("truetype");
+}
 
+@font-face {    
     font-family: 'LCD_Solid';
     src: url('fonts/LCD_Solid.ttf') format("truetype")
 }
