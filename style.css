@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/rzzeset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -120,7 +120,7 @@ button {
 
 i {
     background-color: black;
-    background-image: "images/mind11.jpg"
+    background-image: "images/machine.jpg"
     color: white;
     padding: 10px;
     border-radius: 100px;
