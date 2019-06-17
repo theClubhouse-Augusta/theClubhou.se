@@ -1,85 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* 
-*
-* End of CSS Reset 
-*
-*/
-
-@-webkit-keyframes vroom {
-  from {: url(images/theclubhouse.png);}
-  to {: url(https://enacademic.com/pictures/enwiki/49/1968ChevroletCamaroZ28.png)}
-    12.5% {left: 30%;}
-    25% {left: 50%;}
-    37.5% {left: -30%;}
-    50% {left: -50%;}
-    62.5% {left: -75%;}
-    75% {left: -90%;}
-}
-
-/* Standard syntax */
-@keyframes vroom {
-  from {background-image: url(images/theclubhouse.png);}
-  to {background-image: url(https://enacademic.com/pictures/enwiki/49/1968ChevroletCamaroZ28.png); }
-    12.5% {left: 30%;}
-    25% {left: 50%;}
-    37.5% {left: -30%;}
-    50% {left: -50%;}
-    62.5% {left: -75%;}
-    75% {left: -90%;}
-}
-
-@-web
-
 @font-face {
     font-family: 'league-gothic';
     src: 'fonts/League-Gothic/LeagueGothic-CondensedRegular.otf';
@@ -87,14 +5,9 @@ table {
 body {
     max-width: 500px;
     margin: 0 auto;
-    font-family: Arial Narrow, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    font-variant: small-caps;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.3;
-    background-image: url(https://image.shutterstock.com/z/stock-vector-colorful-vector-seamless-vintage-wavy-pattern-in-mid-century-style-518081149.jpg);
-    color: #774836;
-
+    background-color: blue;
 }
 p {
     text-align: justify;
@@ -107,13 +20,9 @@ a:hover, button:hover {
 }
 main {
     margin-bottom: 30px;
-    padding-bottom: 50px;
     width: 80%;
-    height:1500px;
-    max-width: 500px;
+    max-width: 390px;
     margin: 0 auto;
-    background-color: #F3CDA9;
-    padding:50px;
 }
 section {
     margin-top: 30px;
@@ -123,8 +32,6 @@ footer {
     margin-top: 20px;
     margin-bottom: 30px;
     clear: both;
-    background-color: #537479;
-   
 }
 footer p {
     text-align: center;
@@ -139,20 +46,16 @@ img {
     max-width: 250px;
     display: block;
     margin: 40px auto;
-    
-
 }
 button {
     font-family: 'league-gothic', 'Open Sans';
     font-weight: bold;
     font-size: 40px;
-    background-position: center fill;
-    background-size: 100%;
-    /*background-image: url(http://pluspng.com/img-png/black-and-white-flag-png-black-and-white-chequered-flag-500.png);*/
+    background: white;
+    border: none;
     margin: 0 auto;
     display: block;
     width: 100%;
-    background-color: #537479;
 }
 @media(max-width: 400px) {
     button {
@@ -170,29 +73,16 @@ i {
 .join {
     float: left;
     width: 50%;
-    font-family: marker, fantasy;
-    color:#774836;
-    -webkit-animation-name: vroom;
-    animation-name: vroom;
-    animation-delay: 1.5s;
-    animation-duration: 6s;
 }
 .login {
     float: right;
     width: 50%;
-    font-family: marker, fantasy;
-    color:#774836;
-    -webkit-animation-name: vroom;
-    animation-name: vroom;
-    animation-delay: 1.5s;
-    animation-duration: 6s;
-
 }
 .join > a, .login > a {
     display: block;
     width: 80%;
     margin: 0 auto;
-    border: 1rem solid #EE592E;
+    border: 4px solid black;
     padding: 40px 0;
 }
 
@@ -204,6 +94,7 @@ i {
 
 .join a {
     margin: 0 auto 30px 0;
+    font-family: 'league-gothic', 'sans-serif'; 
 }
 .login a {
     margin: 0 0 30px auto;
@@ -214,4 +105,4 @@ i {
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
-}
+} 
