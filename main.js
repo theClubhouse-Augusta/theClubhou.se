@@ -4,7 +4,7 @@ var students = {
         'Terry',
         'Kat',
         'Melva',
-        'Ameris',
+        'Amaris',
         'Joel',
         'Rain',
         'Lathan',
@@ -33,10 +33,9 @@ function loadStudentStyle (event) {
         // remove from the students.lastClicked list
         var lastStudent = students.lastClicked.pop().toLowerCase();
 
-        console.log(lastStudent);
+
         // get a link with the href of the old style tag    
         var oldLink = document.querySelector("link[href='" + lastStudent + ".css']");
-        console.log(oldLink, lastStudent);
 
         // remove an old link from the DOM
         oldLink.parentNode.removeChild(oldLink);
