@@ -60,6 +60,26 @@ button {
     display: block;
     width: 100%;
 }
+ul {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 4px solid black;
+}
+ul>li {
+    border-bottom: 4px solid black;
+    background: white;
+    padding: 5px 10px;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+ul>li:last-child {
+    border-bottom: none;
+}
+
 @media(max-width: 400px) {
     button {
         font-size: 24px;

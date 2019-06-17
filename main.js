@@ -1,3 +1,9 @@
+
+// Initializing Function
+function initializeStudentEasterEgg () {
+    document.body.appendChild(studentSwapList());
+}
+
 var students = {
     "names": [
         'Veronica',
@@ -5,15 +11,56 @@ var students = {
         'Kat',
         'Melva',
         'Amaris',
-        'Joel',
+        // 'Joel',
         'Rain',
         'Lathan',
-        'Wilisa',
+        'Lisa',
         'Taylor',
         'Chris'
     ],
     "lastClicked": []
 }
+
+/* 
+* Build the List of items 
+*/
+function studentSwapList () {
+
+    if(document.querySelector(".style-swap")) {
+        return;
+    }
+
+    var createStudentElement = function (studentName) {
+
+        var studentElement = document.createElement("li");
+
+        studentElement.classList.add("style-swap__item");
+        studentElement.classList.add("style-swap__item--" + studentName);
+
+        studentElement.textContent = "Styling by: " + studentName;
+
+        return studentElement;
+    }
+
+
+
+    var studentList = document.createElement("ul");
+    studentList.classList.add("style-swap");
+
+    studentList.addEventListener("click", function (event) {
+        loadStudentStyle(event);
+    });
+
+    students.names.forEach(function (studentName) {
+        // Create a list item for each student.
+        var studentEl = createStudentElement(studentName);
+
+        studentList.appendChild(studentEl);
+    });
+
+    return studentList;
+}
+
 
 /* Build the listener function for the swap */
 function loadStudentStyle (event) {
@@ -59,64 +106,4 @@ function loadStudentStyle (event) {
     students.lastClicked.push(studentName);
 
     document.getElementsByTagName('HEAD')[0].appendChild(styleLink);
-}
-
-
-
-/* 
-* Build the List of items 
-*/
-function studentSwapList () {
-
-    if(document.querySelector(".style-swap")) {
-        return;
-    }
-
-    var createStudentElement = function (studentName) {
-
-        var studentElement = document.createElement("li");
-
-        studentElement.classList.add("style-swap__item");
-        studentElement.classList.add("style-swap__item--" + studentName);
-
-        studentElement.textContent = "Styling by: " + studentName;
-
-        return studentElement;
-    }
-
-
-
-    var studentList = document.createElement("ul");
-    studentList.classList.add("style-swap");
-
-    studentList.addEventListener("click", function (event) {
-        loadStudentStyle(event);
-    });
-
-    students.names.forEach(function (studentName) {
-        // Create a list item for each student.
-        var studentEl = createStudentElement(studentName);
-
-        studentList.appendChild(studentEl);
-    });
-
-    return studentList;
-}
-
-
-
-/*
-* Create a button just to assist in development.
-* Take this out for production.
-*/ 
-window.onload = function () {
-    var devBtn = document.createElement("div");
-    devBtn.textContent = "Load Student List";
-    devBtn.style = "padding: 40px";
-
-    devBtn.addEventListener("click", function (e) {
-        document.body.appendChild(studentSwapList());
-    });
-
-    document.body.appendChild(devBtn);
 }
